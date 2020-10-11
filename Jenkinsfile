@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'pwd'
+                withEnv(["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"]) {
+                    sh 'pwd'
+                }
             }
         }
     }
