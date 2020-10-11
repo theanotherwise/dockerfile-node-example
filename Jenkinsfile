@@ -8,9 +8,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                withEnv(['MYTOOL_HOME=/usr/local/mytool']) {
-                    sh '$MYTOOL_HOME/bin/start'
-                }
+                sh 'pwd'
             }
         }
     }
