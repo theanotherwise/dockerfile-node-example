@@ -1,6 +1,7 @@
 pipeline {
     agent { 
-        docker { 
+        docker {
+            label: 'docker-worker-1'
             image 'node:lts-slim'
         }
     }
