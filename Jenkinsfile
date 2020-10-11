@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm install'
+                withEnv(['MYTOOL_HOME=/usr/local/mytool']) {
+                    sh '$MYTOOL_HOME/bin/start'
+                }
             }
         }
     }
